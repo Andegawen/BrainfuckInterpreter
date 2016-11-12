@@ -24,6 +24,11 @@ namespace BrainFuckInterpreter
 			map[pointedCell] = (byte)value;
 		}
 
+		internal void SetValueAt(byte newValue, int pointedCell)
+		{
+			map[pointedCell] = (byte)newValue;
+		}
+
 		private readonly Dictionary<int, byte> map = new Dictionary<int, byte>();
 	}
 }

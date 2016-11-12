@@ -12,7 +12,7 @@ namespace BrainFuckInterpreter
 
 		public string ToText()
 		{
-			return string.Format("P:{0}:{1}", PointedCell, PointedValue);
+			return string.Format("P:{0,10}:{1,3}", PointedCell, PointedValue);
 		}
 
 		internal void IncrementAddress()
@@ -27,6 +27,11 @@ namespace BrainFuckInterpreter
 
 		internal int PointedCell { get; set; }
 		internal byte PointedValue { get { return memory.GetValueAt(PointedCell); } }
+
+		internal void SetValueAt(byte newValue)
+		{
+			memory.SetValueAt(newValue, PointedCell);
+		}
 
 		internal void IncrementValue()
 		{

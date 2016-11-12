@@ -16,8 +16,8 @@ namespace BrainFuckInterpreter.Operations
 				new DecrementPointerOperation(pointer),
 				new IncrementIndicatedCellValueOperation(pointer),
 				new DecrementIndicatedCellValueOperation(pointer),
-				new GetByteValueToIndicatedCellOperation(),
-				new PrintIndicatedCellValueOperation(),
+				new GetByteValueToIndicatedCellOperation(pointer),
+				new PrintIndicatedCellValueOperation(pointer),
 				new LoopCreatorOperation()
 			};
 		}

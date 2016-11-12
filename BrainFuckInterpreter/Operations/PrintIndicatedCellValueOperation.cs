@@ -8,8 +8,21 @@ namespace BrainFuckInterpreter.Operations
 {
 	class PrintIndicatedCellValueOperation : IBrainFuckOperation
 	{
+		public PrintIndicatedCellValueOperation(Pointer pointer)
+		{
+			this.pointer = pointer;
+		}
 		public void HandleSign(char sign)
 		{
+			if (sign == '.')
+				PrintIndicatedCellValue();
 		}
+
+		private void PrintIndicatedCellValue()
+		{
+			Console.WriteLine(pointer.PointedValue);
+		}
+
+		private Pointer pointer;
 	}
 }
