@@ -8,17 +8,17 @@ namespace BrainFuckInterpreter.Operations
 {
 	class BrainFuckOperationFactory
 	{
-		public static IBrainFuckOperation[] GetAllOperations()
+		public static IBrainFuckOperation[] GetAllOperations(Pointer pointer)
 		{
 			return new IBrainFuckOperation[]
 			{
-				new IncrementPointer(),
-				new DecrementPointer(),
-				new IncrementIndicatedCellValue(),
-				new DecrementIndicatedCellValue(),
-				new GetByteValueToIndicatedCell(),
-				new PrintIndicatedCellValue(),
-				new LoopCreator()
+				new IncrementPointerOperation(pointer),
+				new DecrementPointerOperation(pointer),
+				new IncrementIndicatedCellValueOperation(pointer),
+				new DecrementIndicatedCellValueOperation(pointer),
+				new GetByteValueToIndicatedCellOperation(),
+				new PrintIndicatedCellValueOperation(),
+				new LoopCreatorOperation()
 			};
 		}
 	}

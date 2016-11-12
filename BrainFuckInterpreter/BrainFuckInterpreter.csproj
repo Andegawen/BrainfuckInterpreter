@@ -45,14 +45,14 @@
   <ItemGroup>
     <Compile Include="Memory.cs" />
     <Compile Include="Operations\BrainFuckOperationFactory.cs" />
-    <Compile Include="Operations\DecrementIndicatedCellValue.cs" />
-    <Compile Include="Operations\DecrementPointer.cs" />
-    <Compile Include="Operations\GetByteValueToIndicatedCell.cs" />
+    <Compile Include="Operations\DecrementIndicatedCellValueOperation.cs" />
+    <Compile Include="Operations\DecrementPointerOperation.cs" />
+    <Compile Include="Operations\GetByteValueToIndicatedCellOperation.cs" />
     <Compile Include="Operations\IBrainFuckOperation.cs" />
-    <Compile Include="Operations\IncrementIndicatedCellValue.cs" />
-    <Compile Include="Operations\IncrementPointer.cs" />
-    <Compile Include="Operations\Loop.cs" />
-    <Compile Include="Operations\PrintIndicatedCellValue.cs" />
+    <Compile Include="Operations\IncrementIndicatedCellValueOperation.cs" />
+    <Compile Include="Operations\IncrementPointerOperation.cs" />
+    <Compile Include="Operations\LoopCreatorOperation.cs" />
+    <Compile Include="Operations\PrintIndicatedCellValueOperation.cs" />
     <Compile Include="Pointer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

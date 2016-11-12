@@ -1,5 +1,6 @@
 ﻿using BrainFuckInterpreter.Operations;
 using System;
+using System.Linq;
 
 namespace BrainFuckInterpreter
 {
@@ -7,15 +8,14 @@ namespace BrainFuckInterpreter
 	{
 		static void Main(string[] args)
 		{
-			int i = 0;
 			string readLine;
 			var bus = new SignBus();
-			var operations = BrainFuckOperationFactory.GetAllOperations();
+			var pointer = new Pointer(new Memory());
+			var operations = BrainFuckOperationFactory.GetAllOperations(pointer);
 			foreach(var operation in operations)
 			{
 				bus.RegisterOperation(operation);
 			}
-			var pointer = new Pointer(new Memory());
 			Console.SetCursorPosition(0, 1);
 			do
 			{
@@ -27,7 +27,7 @@ namespace BrainFuckInterpreter
 					bus.Send(sign);
 				}
 			}
-			while (readLine != "quit");
+			while (!quitCommands.Any(q=> readLine == q));
 		}
 
 		private static void ShowPointer(Pointer pointer)
@@ -38,5 +38,7 @@ namespace BrainFuckInterpreter
 			Console.WriteLine(pointer.ToText());
 			Console.SetCursorPosition(left, top);
 		}
+
+		private static string[] quitCommands = new[] { "quit", "exit" };
 	}
 }

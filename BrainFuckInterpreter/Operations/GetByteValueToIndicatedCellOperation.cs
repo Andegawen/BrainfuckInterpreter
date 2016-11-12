@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace BrainFuckInterpreter.Operations
 {
-	class IncrementPointer : IBrainFuckOperation
+	class GetByteValueToIndicatedCellOperation : IBrainFuckOperation
 	{
 		public void HandleSign(char sign)
 		{
-			throw new NotImplementedException();
 		}
 	}
 }

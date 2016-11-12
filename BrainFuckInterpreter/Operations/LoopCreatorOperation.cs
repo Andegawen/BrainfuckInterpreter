@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace BrainFuckInterpreter.Operations
 {
-	class IncrementIndicatedCellValue : IBrainFuckOperation
+	class LoopCreatorOperation : IBrainFuckOperation
 	{
 		public void HandleSign(char sign)
 		{
-			throw new NotImplementedException();
 		}
+	}
+
+	class Loop
+	{
+		IList<IBrainFuckOperation> operations;
 	}
 }

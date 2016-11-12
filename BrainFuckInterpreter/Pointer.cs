@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BrainFuckInterpreter
 {
@@ -14,13 +10,32 @@ namespace BrainFuckInterpreter
 			PointedCell = 0;
 		}
 
-		public int PointedCell { get; set; }
-
-		public byte PointedValue { get { return memory.GetValueAt(PointedCell); } }
-
 		public string ToText()
 		{
 			return string.Format("P:{0}:{1}", PointedCell, PointedValue);
+		}
+
+		internal void IncrementAddress()
+		{
+			PointedCell++;
+		}
+
+		internal void DecrementAddress()
+		{
+			PointedCell--;
+		}
+
+		internal int PointedCell { get; set; }
+		internal byte PointedValue { get { return memory.GetValueAt(PointedCell); } }
+
+		internal void IncrementValue()
+		{
+			memory.IncrementAt(PointedCell);
+		}
+
+		internal void DecrementValue()
+		{
+			memory.DecrementAt(PointedCell);
 		}
 
 		private Memory memory;
