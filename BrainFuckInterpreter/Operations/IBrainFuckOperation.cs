@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BrainFuckInterpreter
 {
-	interface IBrainFuckOperation 
+	public interface IBrainFuckOperation
 	{
+		void HandleSign(char sign);
 	}
 }

@@ -43,15 +43,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Memory.cs" />
+    <Compile Include="Operations\BrainFuckOperationFactory.cs" />
     <Compile Include="Operations\DecrementIndicatedCellValue.cs" />
     <Compile Include="Operations\DecrementPointer.cs" />
     <Compile Include="Operations\GetByteValueToIndicatedCell.cs" />
     <Compile Include="Operations\IBrainFuckOperation.cs" />
     <Compile Include="Operations\IncrementIndicatedCellValue.cs" />
     <Compile Include="Operations\IncrementPointer.cs" />
+    <Compile Include="Operations\Loop.cs" />
     <Compile Include="Operations\PrintIndicatedCellValue.cs" />
+    <Compile Include="Pointer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignBus.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

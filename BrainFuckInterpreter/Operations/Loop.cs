@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace BrainFuckInterpreter.Operations
 {
-	class Loop : IBrainFuckOperation
+	class LoopCreator : IBrainFuckOperation
 	{
+		public void HandleSign(char sign)
+		{
+			throw new NotImplementedException();
+		}
+	}
+
+	class Loop
+	{
+		IList<IBrainFuckOperation> operations;
 	}
 }

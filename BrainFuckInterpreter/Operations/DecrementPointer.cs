@@ -8,5 +8,9 @@ namespace BrainFuckInterpreter.Operations
 {
 	class DecrementPointer : IBrainFuckOperation
 	{
+		public void HandleSign(char sign)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

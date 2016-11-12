@@ -18,7 +18,7 @@ namespace BrainFuckInterpreter.Operations
 				new DecrementIndicatedCellValue(),
 				new GetByteValueToIndicatedCell(),
 				new PrintIndicatedCellValue(),
-				new Loop()
+				new LoopCreator()
 			};
 		}
 	}

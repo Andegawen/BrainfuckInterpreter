@@ -8,5 +8,9 @@ namespace BrainFuckInterpreter.Operations
 {
 	class DecrementIndicatedCellValue : IBrainFuckOperation
 	{
+		public void HandleSign(char sign)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

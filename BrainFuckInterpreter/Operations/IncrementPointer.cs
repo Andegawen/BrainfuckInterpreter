@@ -8,5 +8,9 @@ namespace BrainFuckInterpreter.Operations
 {
 	class IncrementPointer : IBrainFuckOperation
 	{
+		public void HandleSign(char sign)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }
