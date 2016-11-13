@@ -17,9 +17,10 @@ namespace BrainFuckInterpreter
 				bus.RegisterOperation(operation);
 			}
 			Console.SetCursorPosition(0, 1);
+			string notEndedOperationSymbol = string.Empty;
 			do
 			{
-				Console.Write("$");
+				Console.Write("{0}$", bus.ConsoleStartedPhrase);
 				ShowPointer(pointer);
 				readLine = Console.ReadLine();
 				foreach (var sign in readLine)

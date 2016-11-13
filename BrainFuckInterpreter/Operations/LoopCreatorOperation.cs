@@ -8,8 +8,11 @@ namespace BrainFuckInterpreter.Operations
 {
 	class LoopCreatorOperation : IBrainFuckOperation
 	{
-		public void HandleSign(char sign)
+		public string HandleSign(char sign)
 		{
+			if (sign == '[')
+				return "creating loop";
+			return string.Empty;
 		}
 	}
 

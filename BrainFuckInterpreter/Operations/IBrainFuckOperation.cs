@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BrainFuckInterpreter
+﻿namespace BrainFuckInterpreter
 {
 	public interface IBrainFuckOperation
 	{
-		void HandleSign(char sign);
+		string HandleSign(char sign);
 	}
 }

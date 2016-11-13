@@ -25,7 +25,6 @@ namespace BrainFuckInterpreter
 			PointedCell--;
 		}
 
-		internal int PointedCell { get; set; }
 		internal byte PointedValue { get { return memory.GetValueAt(PointedCell); } }
 
 		internal void SetValueAt(byte newValue)
@@ -43,6 +42,7 @@ namespace BrainFuckInterpreter
 			memory.DecrementAt(PointedCell);
 		}
 
+		private int PointedCell { get; set; }
 		private Memory memory;
 	}
 }

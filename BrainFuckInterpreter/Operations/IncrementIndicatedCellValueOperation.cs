@@ -12,10 +12,11 @@ namespace BrainFuckInterpreter.Operations
 		{
 			this.pointer = pointer;
 		}
-		public void HandleSign(char sign)
+		public string HandleSign(char sign)
 		{
 			if (sign == '+')
 				IncrementIndicatedCellValue();
+			return string.Empty;
 		}
 
 		private void IncrementIndicatedCellValue()
