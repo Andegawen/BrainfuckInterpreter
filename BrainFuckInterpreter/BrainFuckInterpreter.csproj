@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ByteProvider.cs" />
     <Compile Include="Memory.cs" />
     <Compile Include="Operations\BrainFuckOperationFactory.cs" />
     <Compile Include="Operations\DecrementIndicatedCellValueOperation.cs" />

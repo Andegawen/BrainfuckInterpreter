@@ -27,7 +27,7 @@ namespace BrainFuckInterpreter
 
 		internal byte PointedValue { get { return memory.GetValueAt(PointedCell); } }
 
-		internal void SetValueAt(byte newValue)
+		internal void SetByteValue(byte newValue)
 		{
 			memory.SetValueAt(newValue, PointedCell);
 		}
