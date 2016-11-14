@@ -53,7 +53,7 @@
     <Compile Include="Operations\IncrementIndicatedCellValueOperation.cs" />
     <Compile Include="Operations\IncrementPointerOperation.cs" />
     <Compile Include="Operations\LoopCreatorOperation.cs" />
-    <Compile Include="Operations\PrintIndicatedCellValueOperation.cs" />
+    <Compile Include="Operations\PrintAsciiValueOperation.cs" />
     <Compile Include="Pointer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

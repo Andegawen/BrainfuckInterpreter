@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BrainFuckInterpreter.Operations
 {
-	class PrintIndicatedCellValueOperation : IBrainFuckOperation
+	class PrintAsciiValueOperation : IBrainFuckOperation
 	{
-		public PrintIndicatedCellValueOperation(Pointer pointer)
+		public PrintAsciiValueOperation(Pointer pointer)
 		{
 			this.pointer = pointer;
 		}
@@ -21,7 +17,7 @@ namespace BrainFuckInterpreter.Operations
 
 		private void PrintIndicatedCellValue()
 		{
-			Console.WriteLine(pointer.PointedValue);
+			Console.WriteLine((char)pointer.PointedValue);
 		}
 
 		private Pointer pointer;
