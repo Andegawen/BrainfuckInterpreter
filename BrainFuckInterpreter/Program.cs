@@ -10,8 +10,8 @@ namespace BrainFuckInterpreter
 		{
 			string readLine;
 			var bus = new SignBus();
-			var pointer = new Pointer(new Memory());
-			var operations = BrainFuckOperationFactory.GetAllOperations(pointer);
+			var pointer = new Pointer();
+			var operations = BrainFuckOperationFactory.GetAllOperations(pointer, bus);
 			foreach(var operation in operations)
 			{
 				bus.RegisterOperation(operation);

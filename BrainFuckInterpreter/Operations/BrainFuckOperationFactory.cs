@@ -8,7 +8,7 @@ namespace BrainFuckInterpreter.Operations
 {
 	class BrainFuckOperationFactory
 	{
-		public static IBrainFuckOperation[] GetAllOperations(Pointer pointer)
+		public static IBrainFuckOperation[] GetAllOperations(Pointer pointer, SignBus signBus)
 		{
 			return new IBrainFuckOperation[]
 			{
@@ -17,8 +17,8 @@ namespace BrainFuckInterpreter.Operations
 				new IncrementIndicatedCellValueOperation(pointer),
 				new DecrementIndicatedCellValueOperation(pointer),
 				new GetByteValueToIndicatedCellOperation(pointer),
-				new PrintIndicatedCellValueOperation(pointer),
-				new LoopCreatorOperation()
+				new PrintAsciiValueOperation(pointer),
+				new LoopCreatorOperation(pointer, signBus)
 			};
 		}
 	}

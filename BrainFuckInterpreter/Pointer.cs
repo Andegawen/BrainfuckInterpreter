@@ -4,9 +4,9 @@ namespace BrainFuckInterpreter
 {
 	public class Pointer
 	{
-		public Pointer(Memory memory)
+		public Pointer()
 		{
-			this.memory = memory;
+			memory = new Memory();
 			PointedCell = 0;
 		}
 
